@@ -1,0 +1,29 @@
+% CSTUG bulletin experimental ConTeXt style
+% Filename: t-csbulletin.tex
+% 
+% 19-05-2017
+
+\writestatus{loading}{CSTUG bulletin experimental ConTeXt style}%
+\unprotect
+
+\setupbodyfont[10pt]
+\setupinterlinespace[line=12pt]
+\setuppapersize[A5][A5]
+% \showframe
+\setuplayout
+  [height=fit,
+   topspace=13mm,
+   header=0mm,
+   headerdistance=0mm,
+   footer=\dimexpr210mm-13mm-13mm-41\baselineskip\relax,
+   footerdistance=0mm,
+   width=fit,
+   rightmargin=16mm,
+   rightmargindistance=0mm,
+   backspace=\dimexpr148mm-27cc-16mm\relax]
+\setupindenting[yes,first,15pt]
+\setuppagenumbering
+  [alternative=doublesided,
+   location={footer,right}]
+
+\stopmodule\protect
