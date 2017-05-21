@@ -13,8 +13,9 @@
   setup=list]
 
 % Fonts
+\definebodyfontenvironment[10pt][interlinespace=11dd]
+\definebodyfontenvironment[12pt][interlinespace=14pt]
 \setupbodyfont[10pt]
-\setupinterlinespace[line=11.78pt]
 \setuppapersize[A5][A5]
 
 % Layout
@@ -37,27 +38,26 @@
    location={footer,right}]
 
 % Section heads
-\define[2]\csbulletinsection{{\setupbodyfont[12pt]#2}}
+\define[2]\csbulletinsection{{\switchtobodyfont[12pt]#2}}
 \define[2]\csbulletinsubsection{{#2}}
 \define[2]\csbulletinsubsubsection{{#2}}
 \setuphead[section]
  [style=bold,
   number=no,
   command=\csbulletinsection,
-  interlinespace=14pt,
-  before={\blank[22dd]},
-  after={\blank[11dd]\blank[disable]}]
+  before={\blank[20.5dd]},
+  after={\blank[7dd]\blank[none,disable]}]
 \setuphead[subsection]
  [style=bold,
   number=no,
   command=\csbulletinsubsection,
-  before={\blank[22dd]},
-  after={\blank[1pt]\blank[disable]}]
+  before={\blank[19.5dd]},
+  after={\blank[1pt]\blank[none,disable]}]
 \setuphead[subsubsection]
  [style=medium,
   number=no,
   command=\csbulletinsubsubsection,
-  before={\blank[22dd]},
-  after={\blank[1pt]\blank[disable]}]
+  before={\blank[19.5dd]},
+  after={\blank[1pt]\blank[none,disable]}]
 
 \stopmodule\protect
