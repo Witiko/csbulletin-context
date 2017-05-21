@@ -36,4 +36,28 @@
   [alternative=doublesided,
    location={footer,right}]
 
+% Section heads
+\define[2]\csbulletinsection{{\setupbodyfont[12pt]#2}}
+\define[2]\csbulletinsubsection{{#2}}
+\define[2]\csbulletinsubsubsection{{#2}}
+\setuphead[section]
+ [style=bold,
+  number=no,
+  command=\csbulletinsection,
+  interlinespace=14pt,
+  before={\blank[22dd]},
+  after={\blank[11dd]\blank[disable]}]
+\setuphead[subsection]
+ [style=bold,
+  number=no,
+  command=\csbulletinsubsection,
+  before={\blank[22dd]},
+  after={\blank[1pt]\blank[disable]}]
+\setuphead[subsubsection]
+ [style=medium,
+  number=no,
+  command=\csbulletinsubsubsection,
+  before={\blank[22dd]},
+  after={\blank[1pt]\blank[disable]}]
+
 \stopmodule\protect
